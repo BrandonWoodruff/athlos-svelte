@@ -15,6 +15,9 @@
     function redirectToLocationSpecific() {
         goto('/locationSpecific');
     }
+    function redirectToCreateLocation() {
+        goto('/createLocation');
+    }
 
     onMount(() => {
         gsap.from(".fade-in", {
@@ -29,11 +32,11 @@
 <div class="bg-background min-h-screen flex items-center justify-center">
     <main class="container mx-auto px-4">
         <section class="text-center mb-16 fade-in">
+            <h1 class = "text-5xl font-bold mb-4">Athlendar</h1>
             <h1 class="text-5xl font-bold mb-4">Manage Your Sports Group with Ease</h1>
             <p class="text-xl text-muted-foreground mb-8">Streamline organization, boost engagement, and elevate team performance</p>
-            <Button size="lg" on:click={redirectToGroups}>Get Started</Button>
-            <Button size="lg" on:click={redirectToLocationSearchView}>Location Search View</Button>
-            <Button size="lg" on:click={redirectToLocationSpecific}>Location Specific</Button>
+            <Button size="lg" on:click={redirectToGroups}>Groups</Button>
+            <Button size="lg" on:click={redirectToLocationSearchView}>Locations</Button>
         </section>
 
         <section class="grid md:grid-cols-2 gap-8">
