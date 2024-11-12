@@ -5,6 +5,50 @@
     import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '$lib/components/ui/card';
     import { onMount } from 'svelte';
     import { gsap } from 'gsap';
+    import { goto } from '$app/navigation';
+
+    let name = '';
+    let email = '';
+    let password = '';
+    let confirmPassword = '';
+
+    function redirectToLogin() {
+        goto('/login');
+    }
+
+    function redirectToGroups() {
+        goto('/groups');
+    }
+
+    function handleSubmit() {
+        if (!name) {
+            alert('Please enter your name.');
+            return;
+        }
+        if (!email) {
+            alert('Please enter your email.');
+            return;
+        }
+        if (!password) {
+            alert('Please enter your password.');
+            return;
+        }
+        if (!confirmPassword) {
+            alert('Please confirm your password.');
+            return;
+        }
+
+        if (password !== confirmPassword) {
+            alert('Passwords do not match.');
+            return;
+        }
+
+        console.log('Sign up attempt:', { name, email, password, confirmPassword });
+        redirectToGroups();
+    }
+
+    
+
 
     onMount(() => {
         const card = document.querySelector('.card');
