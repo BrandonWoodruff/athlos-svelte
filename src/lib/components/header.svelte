@@ -17,9 +17,11 @@
 	<div class="container mx-auto flex items-center justify-between">
 		<div class="flex items-center">
 			<a href="/">
-				<img src={favicon} alt="Logo" class="mr-2 h-8 w-auto" />
+				<img src={favicon} alt="Logo" class="mr-2 h-12 w-auto" />
 
 			</a>
+			<Button href="/groups">Groups</Button>
+			<Button href="/locations">Locations</Button>
 		</div>
 		<div class="space-x-2">
 			<!-- {#if isLoggedIn} -->
