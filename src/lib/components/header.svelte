@@ -20,8 +20,8 @@
 				<img src={favicon} alt="Logo" class="mr-2 h-12 w-auto" />
 
 			</a>
-			<Button href="/groups">Groups</Button>
-			<Button href="/locations">Locations</Button>
+			<a href="/groups">Groups</a>
+			<a href="/locationSearchView">Locations</a>
 		</div>
 		<div class="space-x-2">
 			<!-- {#if isLoggedIn} -->
