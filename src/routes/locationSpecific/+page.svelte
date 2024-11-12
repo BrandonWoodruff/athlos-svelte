@@ -1,5 +1,10 @@
 <script>
     import { onMount } from 'svelte';
+    import {goto} from '$app/navigation';
+
+    function redirectToContactManagement() {
+        goto('/contactManagement');
+    }
     
     onMount(() => {
         console.log('Location Specific Page Loaded');
@@ -14,31 +19,19 @@
         
             <div class="flex flex-col items-center space-y-4">
                 <div class="flex flex-col w-full max-w-md">
-                    <label for="location-name" class="txt-lg font-semibold mb-2">Location Name</label>
-                    <input
-                    type="text"
-                    id="location-name"
-                    class="border border-gray-300 rounded-md p-2 w-full"
-                    placeholder="Enter Location Name"/>
+                    <label for="location-name" class="txt-lg font-semibold mb-2 text-decoration-line: underline">Location Name</label>
+                    <label for="location-name" class="txt-lg font-semibold mb-2">Orem, Utah</label>
                 </div>
                 <div class="flex flex-col w-full max-w-md">
-                    <label for="address" class="txt-lg font-semibold mb-2">Address</label>
-                    <input
-                    type="text"
-                    id="address"
-                    class="border border-gray-300 rounded-md p-2 w-full"
-                    placeholder="Enter Address"/>
+                    <label for="address" class="txt-lg font-semibold mb-2 text-decoration-line: underline">Address</label>
+                    <label for="address" class="txt-lg font-semibold mb-2">1234 Main St.</label>
                 </div>
                 <div class="flex flex-col w-full max-w-md">
-                    <label for="pin-location" class="txt-lg font-semibold mb-2">Pin Location</label>
-                    <input
-                    type="text"
-                    id="pin-location"
-                    class="border border-gray-300 rounded-md p-2 w-full"
-                    placeholder="Enter Pin Location"/>
+                    <label for="pin-location" class="txt-lg font-semibold mb-2 text-decoration-line: underline">Pin Location</label>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6087.525598393933!2d-111.71892992360303!3d40.28101906388739!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x874d9b1faf329a5f%3A0xe25ac48a100272e0!2sFulton%20Library!5e0!3m2!1sen!2sus!4v1730755552754!5m2!1sen!2sus" height="450" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
-                <button type="button" class="btn btn-secondary rounded-circle" style="width: 50px; height: 50px;">
-                    <i class="fa-sharp fa-solid fa-bell"></i>
+                <button type="button" on:click={redirectToContactManagement} class="btn btn-secondary rounded-circle" style="width: 50px; height: 50px;">
+                    <i class="fa-sharp fa-solid fa-bell"></i> Contact
                 </button>
             </div>
         </section>

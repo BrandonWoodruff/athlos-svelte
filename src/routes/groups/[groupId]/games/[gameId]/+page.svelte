@@ -8,6 +8,7 @@
     import * as AlertDialog from "$lib/components/ui/alert-dialog";
     import { onMount } from 'svelte';
     import { gsap } from 'gsap';
+    import { goto } from '$app/navigation';
 
     export let data: PageData;
 
@@ -17,6 +18,10 @@
     function isPastGame(gameDate: Date): boolean {
         const now = new Date();
         return gameDate < now;
+    }
+
+    function redirectToLocationSpecific() {
+        goto('/locationSpecific');
     }
 
     // Check if it's a past game
@@ -73,7 +78,8 @@
             <CardDescription>
                 <div class="flex items-center space-x-2">
                     <MapPin class="h-4 w-4" />
-                    <span>{game.location}</span>
+                    <button on:click={redirectToLocationSpecific}>{game.location}</button>
+    
                 </div>
                 <div class="flex items-center space-x-2 mt-2">
                     <Calendar class="h-4 w-4" />

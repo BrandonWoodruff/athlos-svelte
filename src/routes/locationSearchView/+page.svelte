@@ -1,9 +1,19 @@
 <script>
-    import { onMount } from 'svelte';
+    import Button from '$lib/components/ui/button/button.svelte';
+import { onMount } from 'svelte';
+import { goto } from '$app/navigation';
     
     onMount(() => {
         console.log('Location Search View Loaded');
     });
+
+    function redirectToCreateLocation() {
+        goto('/createLocation');
+    }
+    function redirectToLocationSpecific() {
+        goto('/locationSpecific');
+    }
+
 </script>
 
 <div class="bg-background min-h-screen flex">
@@ -17,25 +27,20 @@
                     <div class="flex-1 p-4">
                         <div class="border border-gray-300 rounded-lg p-6 shadow-lg">
                             <h2>View Locations</h2>
-                            <button type="button" class="btn btn-primary border border-gray-200 rounded-lg p-2 shadow-sm w-full mb-4">Location 1</button>
-                            <button type="button" class="btn btn-primary border border-gray-200 rounded-lg p-2 shadow-sm w-full mb-4">Location 2</button>
-                            <button type="button" class="btn btn-primary border border-gray-200 rounded-lg p-2 shadow-sm w-full mb-4">Location 3</button>
-                            <button type="button" class="btn btn-primary border border-gray-200 rounded-lg p-2 shadow-sm w-full mb-4">Location 4</button>
-                            <button type="button" class="btn btn-primary border border-gray-200 rounded-lg p-2 shadow-sm w-full mb-4">Location 5</button>
+                            <section class="flex flex-col space-y-4">
+                                <Button size="lg" on:click={redirectToLocationSpecific}>Location 1</Button>
+                                <Button size="lg" on:click={redirectToLocationSpecific}>Location 2</Button>
+                                <Button size="lg" on:click={redirectToLocationSpecific}>Location 3</Button>
+                            </section>
                         </div>
                     </div>
                     
                     <div class="flex-1 p-4">
                         <div class="border border-gray-300 rounded-lg p-6 shadow-lg">
-                            <h2>Create Location</h2>
-                            <div class="flex flex-col">
-                                <input
-                                type="text"
-                                id="new-location"
-                                class="border border-gray-300 rounded-md p-2 w-full"
-                                placeholder="Enter New Location"/>
-                            </div>
-                            <button type="button" class="btn btn-primary border border-gray-200 rounded-lg p-2 shadow-sm mt-4">Submit</button>
+                            <section>
+                                <Button size="lg" on:click={redirectToCreateLocation}>Create New Location</Button>
+                            </section>
+                            
                         </div>
                     </div>
                 </div>
