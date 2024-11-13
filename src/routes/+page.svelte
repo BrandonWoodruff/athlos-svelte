@@ -6,18 +6,7 @@
     import { Card, CardContent, CardHeader, CardTitle } from "$lib/components/ui/card";
     import { Users, Calendar, Trophy } from "lucide-svelte";
 
-    function redirectToGroups() {
-        goto('/groups');
-    }
-    function redirectToLocationSearchView() {
-        goto('/locationSearchView');
-    }
-    function redirectToLocationSpecific() {
-        goto('/locationSpecific');
-    }
-    function redirectToCreateLocation() {
-        goto('/createLocation');
-    }
+    
     function redirectTosignup() {
         goto('/signup');
     }
