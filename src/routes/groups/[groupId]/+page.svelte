@@ -41,7 +41,7 @@
 	<GroupHeader group={{ ...group, id: String(group.id) }} {members} {isLeader} />
 
 	<Tabs value="info" class="section w-full">
-		<TabsList class="grid w-full grid-cols-3">
+		<TabsList class="grid w-full grid-cols-4">
 			<TabsTrigger value="info" on:click={() => animateTabContent('info')}>
 				<Info class="mr-2 h-4 w-4" />Info
 			</TabsTrigger>
