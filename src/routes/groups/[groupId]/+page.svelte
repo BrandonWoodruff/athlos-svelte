@@ -9,6 +9,7 @@
 	import GroupInfo from '../../../lib/components/GroupInfo.svelte';
 	import GroupMembers from '../../../lib/components/GroupMembers.svelte';
 	import GroupGames from '../../../lib/components/GroupGames.svelte';
+	import GroupChat from '../../../lib/components/GroupChat.svelte';
 
 	export let data: PageData;
 
@@ -50,6 +51,9 @@
 			<TabsTrigger value="games" on:click={() => animateTabContent('games')}>
 				<CalendarDays class="mr-2 h-4 w-4" />Games
 			</TabsTrigger>
+			<TabsTrigger value="chat" on:click={() => animateTabContent('chat')}>
+				<Chat class="mr-2 h-4 w-4" />Chat
+			</TabsTrigger>
 		</TabsList>
 		<TabsContent value="info" class="tab-content-info">
 			<GroupInfo {group} />
@@ -59,6 +63,9 @@
 		</TabsContent>
 		<TabsContent value="games" class="tab-content-games">
 			<GroupGames {upcomingGames} {pastGames} groupId={String(group.id)} />
+		</TabsContent>
+		<TabsContent value="chat" class="tab-content-chat">
+			<GroupChat />
 		</TabsContent>
 	</Tabs>
 </div>
