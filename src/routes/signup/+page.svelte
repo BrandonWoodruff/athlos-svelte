@@ -5,6 +5,14 @@
     import { Card, CardContent, CardHeader, CardTitle, CardFooter } from '$lib/components/ui/card';
     import { onMount } from 'svelte';
     import { gsap } from 'gsap';
+    import { goto } from '$app/navigation';
+
+    let name = '';
+    let email = '';
+
+    function handleSubmit() {
+        goto('/groups');
+    }
 
     onMount(() => {
         const card = document.querySelector('.card');

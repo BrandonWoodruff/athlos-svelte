@@ -9,6 +9,17 @@
 	} from '$lib/components/ui/dropdown-menu';
 	import { User } from 'lucide-svelte';
 
+	import { goto } from '$app/navigation';
+
+
+	function goToGroups() {
+		goto('/groups');
+	}
+
+	function goToLocations() {
+		goto('/locationSearchView');
+	}
+
 	// Placeholder for auth state
 	let isLoggedIn = false; // Change this to false to see the Login/Sign Up buttons
 </script>
@@ -17,9 +28,13 @@
 	<div class="container mx-auto flex items-center justify-between">
 		<div class="flex items-center">
 			<a href="/">
-				<img src={favicon} alt="Logo" class="mr-2 h-8 w-auto" />
+				<img src={favicon} alt="Logo" class="mr-2 h-12 w-auto" />
 
 			</a>
+			<nav class="space-x-4">
+				<a href="/groups">Groups</a>
+				<a href="/locationSearchView">Locations</a>
+			</nav>
 		</div>
 		<div class="space-x-2">
 			<!-- {#if isLoggedIn} -->

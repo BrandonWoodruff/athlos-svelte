@@ -5,6 +5,7 @@
   import { Label } from "$lib/components/ui/label";
   import { onMount } from 'svelte';
   import { gsap } from 'gsap';
+  import { goto } from '$app/navigation';
 
   let email = '';
   let password = '';
@@ -13,6 +14,7 @@
     // TODO: Implement actual login logic
     console.log('Login attempt:', { email, password });
     alert('Login functionality not implemented. This is a frontend-only demo.');
+    goto('/groups');
   }
 
   onMount(() => {
