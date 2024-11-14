@@ -52,4 +52,4 @@
         <input type="text" bind:value={newMessage} on:keydown={(e) => e.key === 'Enter' && sendMessage()} />
         <button on:click={sendMessage}>Send</button>
     </div>
-</div></script>
+</div>

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { PageData } from './$types';
 	import { Tabs, TabsContent, TabsList, TabsTrigger } from '$lib/components/ui/tabs';
-	import { Users, CalendarDays, Info } from 'lucide-svelte';
+	import { Users, CalendarDays, Info, MessageCircle } from 'lucide-svelte';
 	import { gsap } from 'gsap';
 	import { onMount } from 'svelte';
 
@@ -52,7 +52,7 @@
 				<CalendarDays class="mr-2 h-4 w-4" />Games
 			</TabsTrigger>
 			<TabsTrigger value="chat" on:click={() => animateTabContent('chat')}>
-				<Chat class="mr-2 h-4 w-4" />Chat
+				<MessageCircle class="mr-2 h-4 w-4" />Chat
 			</TabsTrigger>
 		</TabsList>
 		<TabsContent value="info" class="tab-content-info">
