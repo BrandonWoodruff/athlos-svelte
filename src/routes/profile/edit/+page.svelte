@@ -7,11 +7,16 @@
   import { enhance } from "$app/forms";
   import { onMount } from 'svelte';
   import { gsap } from 'gsap';
+  import {goto} from '$app/navigation';
 
   export let data: { user: { name: string; email: string; icon: string } };
 
   let { user } = data;
   let iconPreview: string = user.icon;
+
+  function goToProfile() {
+    goto('/profile');
+  }
 
   function handleIconChange(event: Event) {
     const input = event.target as HTMLInputElement;
@@ -76,7 +81,7 @@
           </div>
         </div>
         <CardFooter class="px-0 pt-6 section">
-          <Button type="submit" class="w-full max-w-md mx-auto">Save Changes</Button>
+          <Button type="submit" on:click={goToProfile} class="w-full max-w-md mx-auto">Save Changes</Button>
         </CardFooter>
       </form>
     </CardContent>
