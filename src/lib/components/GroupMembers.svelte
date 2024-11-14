@@ -34,8 +34,8 @@
 			{#each members as member}
 				<div class="flex items-center space-x-4">
 					<Avatar>
-						<AvatarImage alt={member.name} />
-						 on:click={goToProfile}
+						<AvatarImage on:click={goToProfile} alt={member.name} />
+						 
 						<AvatarFallback>{(member.name ?? '').charAt(0)}</AvatarFallback>
 					</Avatar>
 					<div>
