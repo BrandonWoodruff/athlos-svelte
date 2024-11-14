@@ -5,6 +5,7 @@
     import { Button } from "$lib/components/ui/button";
     import { Card, CardContent, CardHeader, CardTitle } from "$lib/components/ui/card";
     import { Users, Calendar, Trophy } from "lucide-svelte";
+
     function redirectToGroups() {
         goto('/groups');
     }
@@ -17,6 +18,7 @@
     function redirectToCreateLocation() {
         goto('/createLocation');
     }
+
     onMount(() => {
         gsap.from(".fade-in", {
             duration: 1,
