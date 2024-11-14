@@ -1,8 +1,9 @@
 <script>
+    import { Card, CardContent, CardHeader, CardTitle } from '$lib/components/ui/card';
     import Button from '$lib/components/ui/button/button.svelte';
-import { onMount } from 'svelte';
-import { goto } from '$app/navigation';
-    
+    import { onMount } from 'svelte';
+    import { goto } from '$app/navigation';
+
     onMount(() => {
         console.log('Location Search View Loaded');
     });
@@ -10,42 +11,37 @@ import { goto } from '$app/navigation';
     function redirectToCreateLocation() {
         goto('/createLocation');
     }
-    function redirectToLocationSpecific() {
-        goto('/locationSpecific');
-    }
 
+    function redirectToLocationSpecific() {
+        goto(`/locationSpecific`);
+    }
 </script>
 
-<div class="bg-background min-h-screen flex">
-    <main class="container mx-auto px-4">
-        <section class="text-center mb-16">
-            <h1 class="text-5xl font-bold mb-4">Location Search View</h1>
-            <p class="text-xl text-muted-foreground mb-8">See and Set Locations</p>
-    
-            <div class="container mx-auto text-center">
-                <div class="flex">
-                    <div class="flex-1 p-4">
-                        <div class="border border-gray-300 rounded-lg p-6 shadow-lg">
-                            <h2>View Locations</h2>
-                            <section class="flex flex-col space-y-4">
-                                <Button size="lg" on:click={redirectToLocationSpecific}>Location 1</Button>
-                                <Button size="lg" on:click={redirectToLocationSpecific}>Location 2</Button>
-                                <Button size="lg" on:click={redirectToLocationSpecific}>Location 3</Button>
-                            </section>
-                        </div>
-                    </div>
-                    
-                    <div class="flex-1 p-4">
-                        <div class="border border-gray-300 rounded-lg p-6 shadow-lg">
-                            <section>
-                                <Button size="lg" on:click={redirectToCreateLocation}>Create New Location</Button>
-                            </section>
-                            
-                        </div>
+<div class="bg-background min-h-screen flex flex-col items-center">
+    <Card class="w-full max-w-3xl mt-8">
+        <CardHeader>
+            <CardTitle>Location Search View</CardTitle>
+        </CardHeader>
+        <CardContent>
+            <p class="text-sm text-muted-foreground mb-4">
+                See and Set Locations
+            </p>
+
+            <div class="grid gap-4">
+                <div class="border border-gray-300 rounded-lg p-4">
+                    <h2 class="font-bold text-lg mb-4">View Locations</h2>
+                    <div class="space-y-2">
+                        <Button size="lg" on:click={() => redirectToLocationSpecific()}>Location 1</Button>
+                        <Button size="lg" on:click={() => redirectToLocationSpecific()}>Location 2</Button>
+                        <Button size="lg" on:click={() => redirectToLocationSpecific()}>Location 3</Button>
                     </div>
                 </div>
-            </div>
-        </section>
-    </main>
-</div>
 
+                <div class="border border-gray-300 rounded-lg p-4">
+                    <h2 class="font-bold text-lg mb-4">Create a New Location</h2>
+                    <Button size="lg" on:click={redirectToCreateLocation}>Create New Location</Button>
+                </div>
+            </div>
+        </CardContent>
+    </Card>
+</div>
