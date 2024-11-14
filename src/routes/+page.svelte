@@ -5,12 +5,18 @@
     import { Button } from "$lib/components/ui/button";
     import { Card, CardContent, CardHeader, CardTitle } from "$lib/components/ui/card";
     import { Users, Calendar, Trophy } from "lucide-svelte";
-
-    
-    function redirectTosignup() {
-        goto('/signup');
+    function redirectToGroups() {
+        goto('/groups');
     }
-
+    function redirectToLocationSearchView() {
+        goto('/locationSearchView');
+    }
+    function redirectToLocationSpecific() {
+        goto('/locationSpecific');
+    }
+    function redirectToCreateLocation() {
+        goto('/createLocation');
+    }
     onMount(() => {
         gsap.from(".fade-in", {
             duration: 1,
@@ -27,7 +33,8 @@
             <h1 class = "text-5xl font-bold mb-4">Athlendar</h1>
             <h1 class="text-5xl font-bold mb-4">Manage Your Sports Group with Ease</h1>
             <p class="text-xl text-muted-foreground mb-8">Streamline organization, boost engagement, and elevate team performance</p>
-            <Button size="lg" on:click={redirectTosignup}>GetStarted</Button>
+            <Button size="lg" on:click={redirectToGroups}>Groups</Button>
+            <Button size="lg" on:click={redirectToLocationSearchView}>Locations</Button>
         </section>
 
         <section class="grid md:grid-cols-2 gap-8">
