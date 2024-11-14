@@ -3,6 +3,7 @@
 	import { Avatar, AvatarFallback, AvatarImage } from '$lib/components/ui/avatar';
 	import { Button } from '$lib/components/ui/button';
 	import { Separator } from '$lib/components/ui/separator';
+	import { goto } from '$app/navigation';
 
 	export let members;
 	export let joinRequests;
@@ -11,6 +12,10 @@
 	function acceptRequest(requestId: string) {
 		// Implement accept logic
 		console.log("Accepting request with ID:", requestId);
+	}
+
+	function goToProfile() {
+		goto('/profile');
 	}
 
 	function declineRequest(requestId: string) {
@@ -30,6 +35,7 @@
 				<div class="flex items-center space-x-4">
 					<Avatar>
 						<AvatarImage alt={member.name} />
+						 on:click={goToProfile}
 						<AvatarFallback>{(member.name ?? '').charAt(0)}</AvatarFallback>
 					</Avatar>
 					<div>
