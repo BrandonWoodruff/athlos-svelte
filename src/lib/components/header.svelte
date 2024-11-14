@@ -34,6 +34,7 @@
 			<nav class="space-x-4">
 				<a href="/groups">Groups</a>
 				<a href="/locationSearchView">Locations</a>
+				<a href='/dashboard'>Dashboard</a>
 			</nav>
 		</div>
 		<div class="space-x-2">
@@ -45,7 +46,6 @@
 					</Button>
 				</DropdownMenuTrigger>
 				<DropdownMenuContent>
-					<DropdownMenuItem><a href="/dashboard">Dashboard</a></DropdownMenuItem>
 					<DropdownMenuItem>
 						<a href="/profile">Profile</a>
 					</DropdownMenuItem>
