@@ -5,9 +5,7 @@
 <footer class="bg-background p-4 text-foreground shadow-md">
 	<div class="container mx-auto flex flex-col items-center justify-center">
 		<div class="mb-2 flex items-center">
-			<a href="/">
 			<img src="{favicon}" alt="Logo" class="mr-2 h-8 w-auto" />
-			</a>
 			<span class="text-sm">&copy; {new Date().getFullYear()} Athlendar. No rights reserved.</span>
 		</div>
 		<div class="space-x-2">

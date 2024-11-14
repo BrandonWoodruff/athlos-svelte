@@ -5,31 +5,14 @@
   import { Label } from "$lib/components/ui/label";
   import { onMount } from 'svelte';
   import { gsap } from 'gsap';
-  import { goto } from '$app/navigation';
 
   let email = '';
   let password = '';
 
-  function redirectToGroups() {
-    goto('/groups');
-  }
-
   function handleSubmit() {
     // TODO: Implement actual login logic
-    //confirm email and password aren't empty
-    if (!email) {
-      alert('Please enter your email.');
-      return;
-    }
-    if (!password) {
-      alert('Please enter your password.');
-      return;
-    }
-
     console.log('Login attempt:', { email, password });
-    //alert('Login functionality not implemented. This is a frontend-only demo.');
-    redirectToGroups();
-
+    alert('Login functionality not implemented. This is a frontend-only demo.');
   }
 
   onMount(() => {
