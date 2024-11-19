@@ -110,14 +110,7 @@
         <CardFooter class="flex justify-between">
             <form method="POST" action="?/attendGame" use:enhance>
                 <input type="hidden" name="userId" value={currentUserId} />
-                <Button 
-                    
-                    disabled={isPast}
-                    class={isPast ? 'opacity-50 cursor-not-allowed' : ''}
-                    on:click={(event) => handleAttend(event, game.id)}
-                >
-                    {isPast ? 'Game Ended' : 'Attend Game'}
-                </Button>
+
             </form>
             <form method="POST" action="?/checkIn" use:enhance={handleCheckInSubmit}>
                 <input type="hidden" name="userId" value={currentUserId} />
