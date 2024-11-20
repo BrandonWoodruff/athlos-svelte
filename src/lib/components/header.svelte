@@ -10,18 +10,13 @@
 	import { User } from 'lucide-svelte';
 
 	import { goto } from '$app/navigation';
-
-
-	function goToGroups() {
-		goto('/groups');
-	}
-
-	function goToLocations() {
-		goto('/locationSearchView');
-	}
+	import { page } from '$app/stores';
 
 	// Placeholder for auth state
 	let isLoggedIn = false; // Change this to false to see the Login/Sign Up buttons
+
+	// Active link check
+	$: currentPath = $page.url.pathname;
 </script>
 
 <header class="bg-background p-4 text-foreground shadow-md">
@@ -29,12 +24,17 @@
 		<div class="flex items-center">
 			<a href="/">
 				<img src={favicon} alt="Logo" class="mr-2 h-12 w-auto" />
-
 			</a>
 			<nav class="space-x-4">
-				<a href="/groups">Groups</a>
-				<a href="/locationSearchView">Locations</a>
-				<a href='/dashboard'>Dashboard</a>
+				<a href="/dashboard" class="pb-1 border-b-2 {currentPath === '/dashboard' ? 'border-foreground' : 'border-transparent'}">
+					Dashboard
+				</a>
+				<a href="/groups" class="pb-1 border-b-2 {currentPath === '/groups' ? 'border-foreground' : 'border-transparent'}">
+					Groups
+				</a>
+				<a href="/locationSearchView" class="pb-1 border-b-2 {currentPath === '/locationSearchView' ? 'border-foreground' : 'border-transparent'}">
+					Locations
+				</a>
 			</nav>
 		</div>
 		<div class="space-x-2">
