@@ -81,7 +81,8 @@
           </div>
         </div>
         <CardFooter class="px-0 pt-6 section">
-          <Button type="submit" on:click={goToProfile} class="w-full max-w-md mx-auto">Save Changes</Button>
+          <Button type="submit" on:click={goToProfile} class="w-md md-w-md mx-auto">Save Changes</Button>
+          <Button on:click={goToProfile} class="w-md md-w-md mx-auto bg-background text-color-dark hover:bg-accent">Cancel</Button>
         </CardFooter>
       </form>
     </CardContent>

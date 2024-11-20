@@ -128,6 +128,20 @@
         </CardFooter>
     </Card>
 
+    <Card class="section">
+        <CardHeader class="flex flex-row items-center justify-between">
+            <CardTitle>Game Preview</CardTitle>
+            <Button>Add Memory</Button>
+        </CardHeader>
+        <CardContent class="mb-6 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+            <CardContent>
+                <div class="border-8 border-transparent	 shadow-md rounded-lg">
+                    <img src="https://images.unsplash.com/photo-1493078640264-28e9ec0ae9ae?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                </div>
+            </CardContent>
+        </CardContent>
+    </Card>
+
     <AlertDialog.Root bind:open={showErrorDialog}>
         <AlertDialog.Content>
             <AlertDialog.Header>

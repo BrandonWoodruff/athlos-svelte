@@ -54,7 +54,7 @@
     goto("/dashboard");
   }
 
-  function isValidEmail(email) {
+  function isValidEmail(email: string) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Basic email validation regex
     return emailRegex.test(email);
   }
