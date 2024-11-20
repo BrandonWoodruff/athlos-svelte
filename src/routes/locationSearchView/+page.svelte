@@ -17,10 +17,10 @@
 
 	let searchQuery = '';
 	let locations = [
-		{ id: 1, name: 'Location A', description: 'Description of Location A' },
-		{ id: 2, name: 'Location B', description: 'Description of Location B' },
-		{ id: 3, name: 'Location C', description: 'Description of Location C' },
-		{ id: 4, name: 'Location D', description: 'Description of Location D' }
+		{ id: 1, name: 'Provo Recreation Center', description: 'A state-of-the-art rec center with pools, gyms, and events.' },
+		{ id: 2, name: 'Orem Fitness Center', description: 'Popular fitness and recreational activities in Orem.' },
+		{ id: 3, name: 'Riverview Park', description: 'Family-friendly park with playgrounds, sports fields, and picnic areas.' },
+		{ id: 4, name: 'Lions Park', description: 'A charming park with a playground, sports courts, and open fields.' }
 	];
 
 	$: filteredLocations = searchQuery
@@ -62,16 +62,6 @@
 					<CardTitle>{location.name}</CardTitle>
 					<CardDescription>{location.description}</CardDescription>
 				</CardHeader>
-				<CardContent>
-					<div class="flex -space-x-4">
-						{#each Array(3) as _}
-							<Avatar class="border-2 border-white">
-								<AvatarImage src="/images/user.png" alt="User avatar" />
-								<AvatarFallback>L</AvatarFallback>
-							</Avatar>
-						{/each}
-					</div>
-				</CardContent>
 				<CardFooter>
 					<Button on:click={() => routeToLocation(location)} class="w-full">View Location</Button>
 				</CardFooter>
