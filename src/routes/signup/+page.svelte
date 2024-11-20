@@ -51,7 +51,7 @@
     if (hasError) return;
 
     // Navigate to groups on successful validation
-    goto("/groups");
+    goto("/dashboard");
   }
 
   function isValidEmail(email) {
