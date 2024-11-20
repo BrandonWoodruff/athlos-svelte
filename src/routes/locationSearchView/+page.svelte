@@ -18,7 +18,7 @@
 	let searchQuery = '';
 	let locations = [
 		{ id: 1, name: 'Provo Recreation Center', description: 'A state-of-the-art rec center with pools, gyms, and events.' },
-		{ id: 2, name: 'Orem Fitness Center', description: 'Popular fitness and recreational activities in Orem.' },
+		{ id: 2, name: 'Orem Fitness Center', description: 'Popular fitness and recreational activities in Orem. Available exercise equiptment' },
 		{ id: 3, name: 'Riverview Park', description: 'Family-friendly park with playgrounds, sports fields, and picnic areas.' },
 		{ id: 4, name: 'Lions Park', description: 'A charming park with a playground, sports courts, and open fields.' }
 	];
