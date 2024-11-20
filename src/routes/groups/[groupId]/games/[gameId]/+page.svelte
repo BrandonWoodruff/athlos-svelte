@@ -78,8 +78,13 @@
             <CardDescription>
                 <div class="flex items-center space-x-2">
                     <MapPin class="h-4 w-4" />
-                    <button on:click={redirectToLocationSpecific}>{game.location}</button>
-    
+                    <!-- Added 'underline' class -->
+                    <button 
+                        class="underline text-black"
+                        on:click={redirectToLocationSpecific}
+                    >
+                        {game.location}
+                    </button>
                 </div>
                 <div class="flex items-center space-x-2 mt-2">
                     <Calendar class="h-4 w-4" />
@@ -110,12 +115,10 @@
         <CardFooter class="flex justify-between">
             <form method="POST" action="?/attendGame" use:enhance>
                 <input type="hidden" name="userId" value={currentUserId} />
-
             </form>
             <form method="POST" action="?/checkIn" use:enhance={handleCheckInSubmit}>
                 <input type="hidden" name="userId" value={currentUserId} />
                 <Button 
-                    
                     disabled={!isToday || isCheckedIn || isPast}
                     class={(!isToday || isCheckedIn || isPast) ? 'opacity-50 cursor-not-allowed' : ''}
                 >
