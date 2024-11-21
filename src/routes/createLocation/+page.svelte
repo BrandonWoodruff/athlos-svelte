@@ -14,7 +14,7 @@
         
             <div class="flex flex-col items-center space-y-4">
                 <div class="flex flex-col w-full max-w-md">
-                    <label for="location-name" class="text-lg font-semibold mb-2">Location Name</label>
+                    <label for="location-name" class="text-lg font-semibold mb-2 text-left">Location Name</label>
                     <input
                     type="text"
                     id="location-name"
@@ -22,14 +22,14 @@
                     placeholder="Enter Location Name"/>
                 </div>
                 <div class="flex flex-col w-full max-w-md">
-                    <label for="location-desc" class="text-lg font-semibold mb-2">Location Description</label>
+                    <label for="location-desc" class="text-lg font-semibold mb-2 text-left">Location Description</label>
                     <textarea
                     id="location-desc"
                     class="border border-gray-300 rounded-md p-2 w-full"
                     placeholder="Enter Location Description"></textarea>
                 </div>
                 <div class="flex flex-col w-full max-w-md">
-                    <label for="location-address" class="text-lg font-semibold mb-2">Location Address</label>
+                    <label for="location-address" class="text-lg font-semibold mb-2 text-left">Location Address</label>
                     <input
                     type="text"
                     id="location-address"
@@ -37,7 +37,7 @@
                     placeholder="Enter Location Address"/>
                 </div>
                 <div class="flex flex-col w-full max-w-md">
-                    <label for="management-email" class="text-lg font-semibold mb-2">Management Email</label>
+                    <label for="management-email" class="text-lg font-semibold mb-2 text-left">Management Email</label>
                     <input
                     type="email"
                     id="management-email"
