@@ -15,8 +15,8 @@
 <div class="bg-background min-h-screen flex">
     <main class="container mx-auto px-4">
         <section class="text-center mb-16">
-            <h1 class="text-5xl font-bold mb-4">Location Specific</h1>
-            <p class="text-xl text-muted-foreground mb-8">Details and management for a specific location.</p>
+            <h1 class="text-5xl font-bold mb-4">UVU Sports Center</h1>
+            <p class="text-xl text-muted-foreground mb-8">Private Indoor court that is great for basketball!</p>
         
             <div class="flex flex-col items-center space-y-4">
                 <div class="flex flex-col w-full max-w-md">
