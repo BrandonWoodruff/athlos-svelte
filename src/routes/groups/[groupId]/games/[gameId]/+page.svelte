@@ -6,6 +6,7 @@
     import { Avatar, AvatarFallback, AvatarImage } from '$lib/components/ui/avatar';
     import { MapPin, Calendar, Users } from 'lucide-svelte';
     import * as AlertDialog from "$lib/components/ui/alert-dialog";
+    import PostComments from '../../../../../lib/components/PostComments.svelte'
     import { onMount } from 'svelte';
     import { gsap } from 'gsap';
     import { goto } from '$app/navigation';
@@ -130,15 +131,29 @@
 
     <Card class="section">
         <CardHeader class="flex flex-row items-center justify-between">
-            <CardTitle>Game Preview</CardTitle>
+            <CardTitle>Game Memories</CardTitle>
             <Button>Add Memory</Button>
         </CardHeader>
-        <CardContent class="mb-6 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-            <CardContent>
-                <div class="border-8 border-transparent	 shadow-md rounded-lg">
-                    <img src="https://images.unsplash.com/photo-1493078640264-28e9ec0ae9ae?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+        <CardContent class="mb-6 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-2">
+            <CardContent class="border-8 m-w-80 border-transparent shadow-md rounded-lg">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1525916192735-22142b82d37a?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NjN8fGJhc2tldGJhbGx8ZW58MHx8MHx8fDA%3D" alt="" class="rounded-lg">
+                    <PostComments/>
                 </div>
             </CardContent>
+            <CardContent class="border-8 w-80 border-transparent shadow-md rounded-lg">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1519684093736-61f49e250672?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzF8fGJhc2tldGJhbGx8ZW58MHx8MHx8fDA%3D" alt="" class="rounded-lg ">
+                    <PostComments/>
+                </div>
+            </CardContent>
+            <CardContent class="border-8 w-80 border-transparent shadow-md rounded-lg">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1518407613690-d9fc990e795f?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDZ8fGJhc2tldGJhbGx8ZW58MHx8MHx8fDA%3D" alt="" class="rounded-lg">
+                    <PostComments/>
+                </div>
+            </CardContent>
+            
         </CardContent>
     </Card>
 
