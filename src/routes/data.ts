@@ -53,7 +53,7 @@ export const users = [
 ];
 
 // Groups Table
-export const groups = [
+export let groups = [
 	{
 		id: 1,
 		name: 'Basketball Enthusiasts',
