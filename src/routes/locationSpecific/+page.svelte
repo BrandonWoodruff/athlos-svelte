@@ -20,7 +20,7 @@
         
             <div class="flex flex-col items-center space-y-4">
                 <div class="flex flex-col w-full max-w-md">
-                    <label for="location-name" class="txt-lg font-semibold mb-2 text-decoration-line: underline">Location Name</label>
+                    <label for="location-name" class="txt-lg font-semibold mb-2 text-decoration-line: underline">Location</label>
                     <label for="location-name" class="txt-lg font-semibold mb-2">Orem, Utah</label>
                 </div>
                 <div class="flex flex-col w-full max-w-md">
