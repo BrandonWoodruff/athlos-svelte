@@ -57,7 +57,7 @@
 	<!-- Upcoming Games Card -->
 	<Card class="section mx-auto mb-4 w-full max-w-3xl">
 		<CardHeader>
-			<CardTitle>Upcoming Games</CardTitle>
+			<CardTitle>Your Upcoming Games</CardTitle>
 		</CardHeader>
 		<CardContent>
 			{#if upcomingGames.length > 0}
