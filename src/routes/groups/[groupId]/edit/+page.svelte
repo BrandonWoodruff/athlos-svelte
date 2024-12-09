@@ -18,6 +18,7 @@
     import { Clock } from 'lucide-svelte';
     import { onMount } from 'svelte';
     import { gsap } from 'gsap';
+    import { toast, Toaster } from "svelte-sonner";
 
     export let data: PageData;
 
@@ -45,6 +46,8 @@
             time: selectedTime,
             location: location
         });
+        //give feedback to the user
+        toast.success('Game added successfully!');
         // TODO: Implement the actual game addition logic
     }
 
@@ -164,3 +167,5 @@
         </CardContent>
     </Card>
 </div>
+
+<Toaster />
