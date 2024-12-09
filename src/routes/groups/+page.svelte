@@ -51,9 +51,14 @@
 <div class="container mx-auto p-4">
 	<h1 class="mb-6 text-3xl font-bold">Groups</h1>
 
-	<div class="mb-6 flex items-center">
-		<Input type="text" placeholder="Search groups..." class="mr-2" bind:value={searchQuery} />
-		<Search class="text-gray-400" />
+	<div class="mb-6 flex items-center gap-2">
+		<div class="flex flex-1 items-center">
+			<Input type="text" placeholder="Search groups..." class="mr-2" bind:value={searchQuery} />
+			<Search class="text-gray-400" />
+		</div>
+		<Button on:click={redirectToCreateGroup}>
+			<Plus class="mr-2 h-4 w-4" /> Create New Group
+		</Button>
 	</div>
 
 	<div class="mb-6 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
@@ -86,8 +91,4 @@
 			</Card>
 		{/each}
 	</div>
-
-	<Button on:click={redirectToCreateGroup} class="fixed bottom-4 right-4 mx-auto w-48"
-		><Plus class="mr-2 h-4 w-4" /> Create New Group</Button
-	>
 </div>
