@@ -40,7 +40,16 @@
             <h1 class = "text-5xl font-bold mb-4">Athlendar</h1>
             <h1 class="text-5xl font-bold mb-4">Manage Your Sports Group with Ease</h1>
             <p class="text-xl text-muted-foreground mb-8">Streamline organization, boost engagement, and elevate team performance</p>
-            <Button size="lg" on:click={goToSignUp}>Get Started</Button>
+            
+            
+            <button class="focus-visible:ring-ring inline-flex items-center 
+            justify-center whitespace-nowrap text-sm font-medium transition-colors
+             focus-visible:outline-none focus-visible:ring-1 disabled:pointer-events-none 
+             disabled:opacity-50 bg-gradient-to-r from-orange-500 to-purple-500 
+             text-primary-foreground hover:bg-primary/90 shadow 
+             h-10 rounded-md px-8" on:click={goToSignUp}>
+                Get Started
+            </button>
         </section>
 
         <section class="flex flex-col items-center gap-20">
