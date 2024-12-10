@@ -58,6 +58,7 @@ export let groups = [
 		id: 1,
 		name: 'Basketball Enthusiasts',
 		description: 'A group for basketball lovers',
+		color: '#0000FF',
 		created_by: users[0].id,
 		created_at: new Date(),
 		updated_at: new Date()
@@ -66,6 +67,7 @@ export let groups = [
 		id: 2,
 		name: '느그리그',
 		description: 'A group for 느그리그 fans',
+		color: '#FFA500',
 		created_by: users[1].id,
 		created_at: new Date(),
 		updated_at: new Date()
@@ -74,9 +76,11 @@ export let groups = [
 		id: 3,
 		name: 'Soccer Lovers',
 		description: 'A group for soccer enthusiasts',
+		color: '#008000',
 		created_by: users[2].id,
 		created_at: new Date(),
 		updated_at: new Date()
+
 	}
 ];
 

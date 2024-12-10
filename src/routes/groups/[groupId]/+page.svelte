@@ -31,13 +31,17 @@
 		}
 	}
 
+	function getColorStyle(color: string) {
+		return `background-color: ${color}25;`; // 25 is hex for 15% opacity
+	}
+
 	onMount(() => {
 		const sections = document.querySelectorAll('.section');
 		gsap.fromTo(sections, { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.6, stagger: 0.2 });
 	});
 </script>
 
-<div class="container mx-auto max-w-3xl px-4 py-8">
+<div class="container mx-auto max-w-3xl px-4 py-8" style={getColorStyle(group.color)}>
 	<GroupHeader group={{ ...group, id: String(group.id) }} {members} {isLeader} />
 
 	<Tabs value="info" class="section w-full">

@@ -27,6 +27,11 @@
     // Group details
     let name = group.name;
     let description = group.description;
+    let color = group.color;
+
+    function getColorStyle(color: string) {
+        return `background-color: ${color}25;`; // 25 is hex for 15% opacity
+    }
 
     // For adding members
     let newMemberId = '';
@@ -60,7 +65,7 @@
     });
 </script>
 
-<div class="container mx-auto p-4 space-y-8 max-w-3xl">
+<div class="container mx-auto p-4 space-y-8 max-w-3xl" style={getColorStyle(color)}>
     <Card class="card">
         <CardHeader>
             <CardTitle>Edit Group</CardTitle>
@@ -74,6 +79,19 @@
                 <div class="space-y-2">
                     <Label for="description">Description</Label>
                     <Textarea id="description" name="description" bind:value={description}></Textarea>
+                </div>
+                <div class="space-y-2">
+                    <Label for="color">Group Color</Label>
+                    <div class="flex gap-2 items-center">
+                        <Input 
+                            id="color" 
+                            name="color" 
+                            type="color" 
+                            bind:value={color}
+                            class="w-[100px] h-[38px] p-1"
+                        />
+                        <div class="text-sm text-muted-foreground">{color}</div>
+                    </div>
                 </div>
                 <Button>Save Changes</Button>
             </form>
