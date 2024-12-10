@@ -11,6 +11,15 @@
 
 	import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
+	import { toast , Toaster } from 'svelte-sonner';
+
+	function logout() {
+		// Implement logout logic
+		console.log('Logging out...');
+		toast.success('Logged out successfully!');
+		// Redirect to the login page
+		goto('/login');
+	}
 
 	// Placeholder for auth state
 	let isLoggedIn = false; // Change this to false to see the Login/Sign Up buttons
@@ -49,7 +58,7 @@
 					<DropdownMenuItem href="/profile">
 						Profile
 					</DropdownMenuItem>
-					<DropdownMenuItem>Logout</DropdownMenuItem>
+					<DropdownMenuItem on:click={logout}>Logout</DropdownMenuItem>
 				</DropdownMenuContent>
 			</DropdownMenu>
 			<!-- {:else} -->
@@ -59,3 +68,5 @@
 		</div>
 	</div>
 </header>
+
+<Toaster />
