@@ -47,6 +47,7 @@
     $: if (success) {
         name = "";
         description = "";
+        goto('/groups');
     }
 
     onMount(() => {
@@ -56,10 +57,6 @@
             { opacity: 1, y: 0, duration: 0.6 }
         );
     });
-
-    function goToGroups() {
-        goto('/groups');
-    }
 </script>
 
 <div class="container mx-auto p-4 max-w-3xl">
@@ -84,7 +81,7 @@
             </Alert>
         {/if}
 
-        <Button type="submit" class="w-full" on:click={goToGroups}>Create Group</Button>
+        <Button type="submit" class="w-full">Create Group</Button>
     </form>
 </div>
 
