@@ -46,8 +46,8 @@
 					</Button>
 				</DropdownMenuTrigger>
 				<DropdownMenuContent>
-					<DropdownMenuItem>
-						<a href="/profile">Profile</a>
+					<DropdownMenuItem href="/profile">
+						Profile
 					</DropdownMenuItem>
 					<DropdownMenuItem>Logout</DropdownMenuItem>
 				</DropdownMenuContent>
