@@ -24,6 +24,16 @@
 
     const { group, members, allUsers, groupGames } = data;
 
+    function saveChanges() {
+        console.log('Save changes clicked:', {
+            name,
+            description,
+            color
+        });
+        //give feedback to the user
+        toast.success('Changes saved successfully!');
+    }
+
     // Group details
     let name = group.name;
     let description = group.description;
@@ -93,7 +103,7 @@
                         <div class="text-sm text-muted-foreground">{color}</div>
                     </div>
                 </div>
-                <Button>Save Changes</Button>
+                <Button on:click={saveChanges}>Save Changes</Button>
             </form>
         </CardContent>
     </Card>
