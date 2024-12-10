@@ -102,7 +102,7 @@
             </Alert>
         {/if}
 
-        <Button type="submit" class="w-full">Create Group</Button>
+        <Button type="submit" class="w-full">Create Location</Button>
     </form>
 </div>
 
