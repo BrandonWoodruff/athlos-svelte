@@ -17,7 +17,7 @@
     let error = "";
     let success = false;
 
-    function createGroup() {
+    async function createGroup() {
         error = "";
         success = false;
 
@@ -30,24 +30,9 @@
             return
         }
 
-        // Add the new group to the groups array
-        groups.push({
-            id: Date.now(), // Use a numeric ID based on the current timestamp
-            name,
-            description,
-            created_by: '', // Add appropriate user ID
-            created_at: new Date(),
-            updated_at: new Date()
-        });
-
         success = true;
+        await goto('/groups');
         toast.success("Group created successfully!");
-    }
-
-    $: if (success) {
-        name = "";
-        description = "";
-        goto('/groups');
     }
 
     onMount(() => {
