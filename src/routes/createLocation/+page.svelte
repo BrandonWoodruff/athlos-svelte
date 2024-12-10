@@ -25,22 +25,31 @@
     let email = ''
     let hours = ''
     let success = false
-    let error = ''
+    let errors = []
 
     function createLocation() {
-        error = "";
-        success = false;
+        errors = [];
 
         if (!name.trim()) {
-            error = "Group name is required";
-            return;
+            errors.push("Location name is required");
         }
-        else if(!description.trim()){
-            error = "Group description is required"
-            return
+        if (!description.trim()) {
+            errors.push("Location description is required");
         }
-        success = true;
-        toast.success("Group created successfully!");
+        if (!address.trim()) {
+            errors.push("Location address is required");
+        }
+        if (!email.trim()) {
+            errors.push("Management email is required");
+        }
+        if (!hours.trim()) {
+            errors.push("Location hours are required");
+        }
+
+        if (errors.length === 0) {
+            success = true;
+            toast.success("Location created successfully!");
+        }
     }
 
     $: if (success) {
@@ -79,11 +88,17 @@
             <Textarea id="hours" bind:value={hours} placeholder="Enter Location Hours" />
         </div>
 
-        {#if error}
+        {#if errors.length > 0}
             <Alert variant="destructive">
                 <CircleAlert class="h-4 w-4" />
-                <AlertTitle>Error</AlertTitle>
-                <AlertDescription>{error}</AlertDescription>
+                <AlertTitle>Errors</AlertTitle>
+                <AlertDescription>
+                    <ul class="list-disc pl-4">
+                        {#each errors as error}
+                            <li>{error}</li>
+                        {/each}
+                    </ul>
+                </AlertDescription>
             </Alert>
         {/if}
 
