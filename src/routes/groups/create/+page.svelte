@@ -3,6 +3,7 @@
     import { Input } from "$lib/components/ui/input";
     import { Label } from "$lib/components/ui/label";
     import { Textarea } from "$lib/components/ui/textarea";
+    import { goto } from '$app/navigation';
     import { Alert, AlertDescription, AlertTitle } from "$lib/components/ui/alert";
     import { toast, Toaster } from "svelte-sonner";
     import { CircleAlert } from "lucide-svelte";
@@ -23,6 +24,10 @@
         if (!name.trim()) {
             error = "Group name is required";
             return;
+        }
+        else if(!description.trim()){
+            error = "Group description is required"
+            return
         }
 
         // Add the new group to the groups array
@@ -51,6 +56,10 @@
             { opacity: 1, y: 0, duration: 0.6 }
         );
     });
+
+    function goToGroups() {
+        goto('/groups');
+    }
 </script>
 
 <div class="container mx-auto p-4 max-w-3xl">
@@ -75,7 +84,7 @@
             </Alert>
         {/if}
 
-        <Button type="submit" class="w-full">Create Group</Button>
+        <Button type="submit" class="w-full" on:click={goToGroups}>Create Group</Button>
     </form>
 </div>
 
